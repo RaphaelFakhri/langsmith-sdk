@@ -776,7 +776,7 @@ export class RunTree implements BaseRun {
     if (
       primary === undefined &&
       projectName === this.project_name &&
-      address === this.address
+      (address === this.address || !!address?.equals(this.address))
     ) {
       return {
         ...baseRun,
